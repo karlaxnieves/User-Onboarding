@@ -101,9 +101,7 @@ export default function App() {
         errors={formErrors}
       />
 
-      {/* {users.map((user) => {
-        return <Friend key={friend.id} details={friend} />;
-      })} */}
+      
     </div>
   );
 
