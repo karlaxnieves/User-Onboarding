@@ -23,10 +23,10 @@ const initialUser = [];
 const initialDisabled = true;
 
 export default function App() {
-  const [user, setUser] = useState({});
-  const [form, setFormValues] = useState(initialFormValues);
-  const [formError, setFormError] = useState(initialFormError);
-  const [disabled, setDisables] = useState(initialDisabled)
+  const [user, setUser] = useState(initialUser);
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [formErrors, setFormErrors] = useState(initialFormError);
+  const [disabled, setDisabled] = useState(initialDisabled)
 
 
   const getUsers = () => {
@@ -94,9 +94,6 @@ export default function App() {
     postNewUser(newUser)
   }
 
-  useEffect(() => {
-    getUsers();
-  }, [])
 
   useEffect(() => {
     schema.isValid(formValues).then((valid) => {
